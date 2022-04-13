@@ -1,17 +1,25 @@
 VERSION 5.00
 Begin VB.Form Form1 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Ethical Hacking Tools 1.0"
+   Caption         =   "Ethical Hacking Tools 1.1"
    ClientHeight    =   2055
    ClientLeft      =   45
    ClientTop       =   390
-   ClientWidth     =   9975
+   ClientWidth     =   11580
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    ScaleHeight     =   2055
-   ScaleWidth      =   9975
+   ScaleWidth      =   11580
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command7 
+      Caption         =   "The Ransomware Builder"
+      Height          =   495
+      Left            =   9840
+      TabIndex        =   7
+      Top             =   960
+      Width           =   1455
+   End
    Begin VB.CommandButton Command6 
       Caption         =   "The Matrix"
       Height          =   495
@@ -62,7 +70,7 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
-      Caption         =   "Ethical Hacking Tools 1.0"
+      Caption         =   "Ethical Hacking Tools 1.1"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   15.75
@@ -73,7 +81,7 @@ Begin VB.Form Form1
          Strikethrough   =   0   'False
       EndProperty
       Height          =   855
-      Left            =   1920
+      Left            =   3960
       TabIndex        =   1
       Top             =   120
       Width           =   4695
@@ -106,4 +114,8 @@ End Sub
 
 Private Sub Command6_Click()
 cmds = CreateObject("Wscript.shell").run("thematrix.bat")
+End Sub
+
+Private Sub Command7_Click()
+cmds = CreateObject("Wscript.shell").run("ransom_builder.exe")
 End Sub
